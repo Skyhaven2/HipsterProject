@@ -22,16 +22,10 @@ public class HipsterPanel extends JPanel
 		this.baseController = baseController;
 		baseLayout = new SpringLayout();
 		titleLabel = new JLabel("Welcome to Learn about Hipster Music!");
-		baseLayout.putConstraint(SpringLayout.WEST, titleLabel, 10, SpringLayout.WEST, this);
 		albumLabel = new JLabel("Album info here :D");
-		baseLayout.putConstraint(SpringLayout.EAST, albumLabel, -10, SpringLayout.EAST, this);
 		hipsterImage = new JLabel("Link", new ImageIcon(HipsterPanel.class.getResource("/ctec/hipster/view/images/LinkSpriteDown.png")), JLabel.CENTER);
-		baseLayout.putConstraint(SpringLayout.NORTH, hipsterImage, -1, SpringLayout.NORTH, albumLabel);
-		baseLayout.putConstraint(SpringLayout.WEST, hipsterImage, 10, SpringLayout.WEST, this);
 		hipsterImage.setVerticalAlignment(SwingConstants.BOTTOM);
 		albumBox = new JComboBox();
-		baseLayout.putConstraint(SpringLayout.NORTH, albumLabel, 6, SpringLayout.SOUTH, albumBox);
-		baseLayout.putConstraint(SpringLayout.NORTH, titleLabel, 0, SpringLayout.NORTH, albumBox);
 		
 		setupComboBox();
 		setupPanel();
@@ -59,6 +53,12 @@ public class HipsterPanel extends JPanel
 	{
 		baseLayout.putConstraint(SpringLayout.NORTH, albumBox, 10, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.EAST, albumBox, -10, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, titleLabel, 10, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.EAST, albumLabel, -10, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, hipsterImage, -1, SpringLayout.NORTH, albumLabel);
+		baseLayout.putConstraint(SpringLayout.WEST, hipsterImage, 10, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, albumLabel, 6, SpringLayout.SOUTH, albumBox);
+		baseLayout.putConstraint(SpringLayout.NORTH, titleLabel, 0, SpringLayout.NORTH, albumBox);
 	}
 	
 	private void setupListeners()
