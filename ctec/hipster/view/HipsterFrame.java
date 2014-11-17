@@ -18,7 +18,7 @@ public class HipsterFrame extends JFrame
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel);
-		this.setSize(1000, 400);
+		this.setSize(500, 400);
 		this.setResizable(false);
 		this.setVisible(true);
 	}
